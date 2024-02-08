@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"id":"d2c6e8ead6979822","type":"text","text":"- [*]  *Utilisateur*\n\n- [k] ID_ utilisateur\n- [i] Nom \n- [i] Pseudonyme\n- [i] Rôle\n- [i] Mots de passe\n- [i] Adresse mail\n","x":-125,"y":-30,"width":250,"height":250,"color":"5"},
+		{"id":"e6c540b3e0b3c5b1","type":"text","text":"- [*] *Personnage*\n- [!] id_ personnage\n- [i] Nom\n- [i] Origine\n- [i] Stats\n- [!] type\n- [i] nombre de combat gagné","x":820,"y":-30,"width":250,"height":250,"color":"5"},
+		{"id":"ab8743ca278b12ca","type":"text","text":"- [*] *Combat*\n- [k] id_combat \n- [!] id_utilisateur \n- [!] id_combattant1\n- [!] id_combattant2\n- [!] id_winner\n","x":340,"y":5,"width":250,"height":180,"color":"1"},
+		{"id":"37d9e0f4ab1998de","type":"text","text":"- [*] *Equipement*\n- [k] id_equipement\n- [!] type \n- [i] Bonus de stats ","x":820,"y":-740,"width":250,"height":120,"color":"5"},
+		{"id":"50d1c6609366a665","type":"text","text":"- [*] *Combattant*\n- [k] id_combattant\n- [!] id_personnage \n- [!] id_equipement\n- [i] stats modifier with boost ","x":820,"y":-472,"width":250,"height":240,"color":"1"},
+		{"id":"489576e597b1b32c","type":"text","text":"- [*] Type\n- [k] id_type\n- [i] nom","x":1400,"y":-472,"width":250,"height":235}
+	],
+	"edges":[
+		{"id":"ad566dea2d844382","fromNode":"d2c6e8ead6979822","fromSide":"right","toNode":"ab8743ca278b12ca","toSide":"left"},
+		{"id":"356c29b596e7ebb0","fromNode":"37d9e0f4ab1998de","fromSide":"bottom","toNode":"50d1c6609366a665","toSide":"top"},
+		{"id":"aa7fe9cee2e6c5a2","fromNode":"e6c540b3e0b3c5b1","fromSide":"top","toNode":"50d1c6609366a665","toSide":"bottom"},
+		{"id":"a5c09e9a49d8b3bf","fromNode":"50d1c6609366a665","fromSide":"left","toNode":"ab8743ca278b12ca","toSide":"top"},
+		{"id":"3b93bd7799d16512","fromNode":"489576e597b1b32c","fromSide":"top","toNode":"37d9e0f4ab1998de","toSide":"right"},
+		{"id":"5b47e23b7a4c8c0d","fromNode":"489576e597b1b32c","fromSide":"bottom","toNode":"e6c540b3e0b3c5b1","toSide":"right"},
+		{"id":"0e4d606ea0eb9364","fromNode":"489576e597b1b32c","fromSide":"left","toNode":"50d1c6609366a665","toSide":"right"}
+	]
+}
